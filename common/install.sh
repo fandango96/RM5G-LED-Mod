@@ -75,7 +75,7 @@ handle_four_colors_internal() {
                 fi
         done
 
-        printf $subs | dd of=aw22xxx_cfg_$1.bin bs=1 seek=$6 count=24 conv=notrunc
+        printf $subs | dd of=$MODPATH/system/vendor/firmware/aw22xxx_cfg_$1.bin bs=1 seek=$6 count=24 conv=notrunc
 }
 
 handle_one_color() {
