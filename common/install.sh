@@ -79,21 +79,21 @@ handle_four_colors_internal() {
 }
 
 handle_one_color() {
-        color=$(cat $1'_one_color.txt')
+        color=$(cat $config_dir/$1'_one_color.txt')
 	ui_print " "
 	ui_print "- Handling $1 one color = $color"
         handle_four_colors_internal $2'0' $color $color $color $color $3
 }
 
 handle_one_color_special() {
-        color=$(cat $1'_one_color.txt')
+        color=$(cat $config_dir/$1'_one_color.txt')
 	ui_print " "
 	ui_print "- Handling $1 one color = $color"
         handle_four_colors_internal $2'0' $color $color $color '000000' $3
 }
 
 handle_two_colors() {
-        filename=$1'_two_colors.txt'
+        filename=$config_dir'/'$1'_two_colors.txt'
         color1=$(head -n 1 $filename)
         color2=$(tail -n 1 $filename)
 	ui_print " "
@@ -102,7 +102,7 @@ handle_two_colors() {
 }
 
 handle_four_colors() {
-        filename=$1'_four_colors.txt'
+        filename=$config_dir'/'$1'_four_colors.txt'
         color1=$(head -n 1 $filename)
         color2=$(head -n 2 $filename | tail -n 1)
         color3=$(head -n 3 $filename | tail -n 1)
