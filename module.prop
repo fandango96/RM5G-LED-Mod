@@ -3,4 +3,4 @@ name=RedMagic 5G LED Mod
 version=v0.1
 versionCode=1
 author=fandango96
-description= Magisk Module to customise the light strip colors on the the RedMagic 5G (not for 5S)
+description=Magisk Module to customise the light strip colors on the the RedMagic 5G (not for 5S)
