@@ -143,3 +143,6 @@ handle_lamp_with_sound
 handle_steady_lighting_up
 handle_breathe
 handle_flow
+
+ui_print " "
+ui_print "Enjoy! Report bugs and share your custom configs with me: @fandango96"
