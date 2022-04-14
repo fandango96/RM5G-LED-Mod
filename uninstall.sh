@@ -1,3 +1,5 @@
+rm -rf /storage/emulated/0/Android/led_mod
+
 # Don't modify anything after this
 if [ -f $INFO ]; then
   while read LINE; do
