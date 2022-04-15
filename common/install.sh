@@ -114,7 +114,7 @@ handle_four_colors() {
 
 handle_one_four() {
         handle_one_color $1 $2 36
-        handle_four_colors $1 $2 30
+        handle_four_colors $1 $2 36
 }
 
 handle_flashing() {
@@ -135,7 +135,7 @@ handle_breathe() {
 
 handle_flow() {
         handle_one_color_special 'flow' 'a' 42
-        handle_four_colors 'flow' 'a' 30
+        handle_four_colors 'flow' 'a' 42
 }
 
 handle_flashing
