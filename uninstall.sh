@@ -1,10 +1,5 @@
-until [[ $(getprop sys.boot_completed) = 1 ]] && [[ $(getprop dev.bootcomplete) = 1 ]] && [[ $(getprop service.bootanim.exit) = 1 ]] && [[ $(getprop init.svc.bootanim) = stopped ]];  do
-sleep 3
-done
-
-sleep 1
-
-rm -rf /storage/emulated/0/Android/led_mod
+(until [ -d /storage/emulated/0/Android/led_mod ]; do sleep 20; done
+rm -rf /storage/emulated/0/Android/led_mod) &
 
 # Don't modify anything after this
 if [ -f $INFO ]; then
