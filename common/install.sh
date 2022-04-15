@@ -39,7 +39,7 @@ handle_four_colors_internal() {
 
         subs=""
 
-        for i in {16..27}
+	for i in $(seq 16 27)
         do
                 if [[ $i -le 18 ]]
                 then
