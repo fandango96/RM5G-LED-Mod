@@ -1,7 +1,10 @@
-if [ ! -e /data/adb/modules/rm5g_led_mod ]; then
-	while [ "`getprop sys.boot_completed | tr -d '\r'`" != 1 ]; do sleep 1; done
-	rm -rf /storage/emulated/0/Android/led_mod
-fi
+until [[ $(getprop sys.boot_completed) = 1 ]] && [[ $(getprop dev.bootcomplete) = 1 ]] && [[ $(getprop service.bootanim.exit) = 1 ]] && [[ $(getprop init.svc.bootanim) = stopped ]];  do
+sleep 3
+done
+
+sleep 1
+
+rm -rf /storage/emulated/0/Android/led_mod
 
 # Don't modify anything after this
 if [ -f $INFO ]; then
