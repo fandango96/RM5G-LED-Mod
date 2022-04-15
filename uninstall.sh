@@ -1,4 +1,7 @@
-rm -rf /storage/emulated/0/Android/led_mod
+if [ ! -e /data/adb/modules/rm5g_led_mod ]; then
+	while [ "`getprop sys.boot_completed | tr -d '\r'`" != 1 ]; do sleep 1; done
+	rm -rf /storage/emulated/0/Android/led_mod
+fi
 
 # Don't modify anything after this
 if [ -f $INFO ]; then
